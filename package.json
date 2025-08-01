@@ -1,0 +1,31 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch index.ts",
+    "format": "prettier --write .",
+    "db:up:prod": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env production migrate:latest",
+    "db:make:prod": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env production migrate:make",
+    "db:up:dev": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env development migrate:latest",
+    "db:make:dev": "tsx --no-warnings ./node_modules/knex/bin/cli.js --knexfile knexfile.ts --env development migrate:make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.3"
+  }
+}
